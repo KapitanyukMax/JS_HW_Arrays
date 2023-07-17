@@ -21,8 +21,9 @@ console.log(`Ordered by descending array: ${sorted}`);
 console.log(`Changed array: ${arr.slice(0, 10).concat(arr.slice(10).map(() => 0))}`);
 
 //6
-arr.splice(0, 3);
-console.log(`Array without first 3 elements: ${arr}`);
+let splicedArr = arr.slice();
+splicedArr.splice(0, 3);
+console.log(`Array without first 3 elements: ${splicedArr}`);
 
 //7
 let isUnique = true;
@@ -38,3 +39,7 @@ for (const elem of arr) {
 
 isUnique ? console.log("The array does not contain duplicate elements")
     : console.log("The array contains duplicate elements");
+
+//8
+let halfArr = arr.splice(10);
+console.log(`The second half of the array: ${halfArr}`);
