@@ -13,5 +13,9 @@ multiplesOf7.length === 0 ? console.log("There are no multiples of 7 in the arra
     : console.log(`Multiples of 7: ${multiplesOf7}`);
 
 //4
-arr.sort((a, b) => b - a);
-console.log(`Ordered by descending array: ${arr}`);
+let sorted = arr.slice();
+sorted.sort((a, b) => b - a);
+console.log(`Ordered by descending array: ${sorted}`);
+
+//5
+console.log(`Changed array: ${arr.slice(0, 10).concat(arr.slice(10).map(() => 0))}`);
