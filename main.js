@@ -19,3 +19,7 @@ console.log(`Ordered by descending array: ${sorted}`);
 
 //5
 console.log(`Changed array: ${arr.slice(0, 10).concat(arr.slice(10).map(() => 0))}`);
+
+//6
+arr.splice(0,3);
+console.log(`Array without first 3 elements: ${arr}`);
