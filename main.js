@@ -21,5 +21,20 @@ console.log(`Ordered by descending array: ${sorted}`);
 console.log(`Changed array: ${arr.slice(0, 10).concat(arr.slice(10).map(() => 0))}`);
 
 //6
-arr.splice(0,3);
+arr.splice(0, 3);
 console.log(`Array without first 3 elements: ${arr}`);
+
+//7
+let isUnique = true;
+let uniqueArr = [];
+for (const elem of arr) {
+    if (uniqueArr.includes(elem)) {
+        isUnique = false;
+        break;
+    }
+    else
+        uniqueArr.push(elem);
+}
+
+isUnique ? console.log("The array does not contain duplicate elements")
+    : console.log("The array contains duplicate elements");
