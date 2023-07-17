@@ -41,5 +41,9 @@ isUnique ? console.log("The array does not contain duplicate elements")
     : console.log("The array contains duplicate elements");
 
 //8
-let halfArr = arr.splice(10);
+let halfArr = arr.slice(10);
 console.log(`The second half of the array: ${halfArr}`);
+
+//9
+let even = arr.reduce((prev, current) => current % 2 == 0 ? ++prev : prev, 0);
+console.log(`There are ${even} even numbers in the array`);
